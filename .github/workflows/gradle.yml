@@ -14,12 +14,12 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
       - name: Container start
         uses: hoverkraft-tech/compose-action@v2.0.1
       - name: Waiting for сontainer start
         run: sleep 30
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
       - name: Start SUT
         # Запускаем SUT,
         # имя файла SUT будет отличаться в каждой задаче.
